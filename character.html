@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" href="css/reset.css">
+ <link rel="stylesheet" href="css/style.css">
+ <!-- jq本体 -->
+ <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- ハンバーガーメニュー  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('.drawer').drawer();
+    });
+    </script> 
+ <!-- ローディング画面 -->
+ <script>
+    $(function() {
+      var h = $(window).height();
+      
+      $('#wrap').css('display','none');
+      $('#loader-bg ,#loader').height(h).css('display','block');
+    });
+      
+    $(window).load(function () { //全ての読み込みが完了したら実行
+      $('#loader-bg').delay(900).fadeOut(800);
+      $('#loader').delay(600).fadeOut(300);
+      $('#wrap').css('display', 'block');
+    });
+      
+ </script>    
+ <!-- ふわっとフェードイン -->
+ <script>
+    $(function(){
+    $(window).scroll(function (){
+    $('.fadein').each(function(){
+    var targetElement = $(this).offset().top;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll > targetElement - windowHeight + 200){
+    $(this).css('opacity','1');
+    $(this).css('transform','translateY(0)');
+    }
+    });
+    });
+    });
+    </script>
+ <!-- スムーススクロール -->
+ <script>
+    $(function(){
+    $('a[href^=#]').click(function() {
+    var speed = 400;
+    var href= $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    $('body,html').animate({scrollTop:position}, speed, 'swing');
+    return false;
+    });
+    });
+    </script>
+<!-- スクロール     -->
+<script>
+    $(function() {
+    var topBtn = $('#page-top');
+    topBtn.hide();
+    //スクロールが100pxに達したらボタン表示
+    $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+    topBtn.fadeIn();
+    } else {
+    topBtn.fadeOut();
+    }
+    });
+    //スクロールしてトップ
+    topBtn.click(function () {
+    $('body,html').animate({
+    scrollTop: 0
+    }, 500);
+    return false;
+    });
+    });
+    </script>        
+ <title>ドラゴンボール超スーパーヒーロー/キャラクター</title>
+</head>
+<body class="drawer drawer--right">
+
+    <a id="jump"></a>    
+
+<div id="loader-bg">
+    <div id="loader">
+      <img src="images/menu/loading_logo.png" width="150%"  alt="Now Loading..." />
+    </div>
+  </div>
+  <div id="wrap">
+    <a href="character.html"></a>
+</div>
+
+
+
+<header class="title">
+    <div class="fuwa"><a href="index.html"><img class="title-logo" src="images/menu/loading_logo.png" alt="ドラゴンボール超スーパーヒーロー"></a></div>
+    <div class="navi">
+        <a href="index.html#story3"><img class="min-logo" src="images/menu/menu_btn_04.png" alt="イントロダクション/ストーリー"></a>
+        <a href="character.html"><img class="min-logo" src="images/menu/menu_btn_05.png" alt="キャラクター"></a>
+        <a href="#movie3"><img class="min-logo" src="images/menu/menu_btn_07.png" alt="動画一覧"></a>
+    </div>
+    <link href="css/drawer.css" rel="stylesheet">
+    <button type="button" class="drawer-toggle drawer-hamburger">
+        <span class="sr-only">toggle navigation</span>
+        <span class="drawer-hamburger-icon"></span>
+        </button>
+        <nav class="drawer-nav" role="navigation">
+        <ul class="drawer-menu">
+        <li><a class="drawer-menu-item" href="index.html#story3"><img src="images/menu/menu_btn_04.png" width="250px" alt=""></a></li>
+        <li><a class="drawer-menu-item" href="character.html"><img src="images/menu/menu_btn_05.png" width="250px" alt=""></a></li>
+        <li><a class="drawer-menu-item" href="#movie3"><img src="images/menu/menu_btn_07.png" width="250px" alt=""></a></li>
+        </ul>
+        </nav>    
+</header>
+<main class="maind">
+    <div class="B-char2">
+        <img class="B-char" src="images/menu/menu_btn_05.png" alt="キャラクター紹介">
+    </div>
+    <div class="char-wrap">
+        <div class="char-pic2">
+            <img class="char-pic" src="images/ct/chara_1.png" alt="孫悟飯">
+        </div>
+        <div class="char-text">
+            <h1>孫悟飯</h1>
+            <h3>本作の主人公であり、ピッコロとは師弟関係。悟空とベジータを凌ぐすざましいポテンシャルを持ってるが、闘いを好まず、学者として静かに生きている。</h3>
+            <h2>Voice/野沢雅子</h2>
+            <h3>代表作[ドラゴンボール] </h3>
+        </div>
+    </div>
+    <div class="char-wrap fadein">
+        <div class="char-pic2">
+            <img class="char-pic" src="images/ct/chara_2.png" alt="ピッコロ">
+        </div>
+        <div class="char-text">
+            <h1>ピッコロ</h1>
+            <h3>かつて世界を恐怖に落としたピッコロ大魔王の分身で悟空の宿敵。ナメック星人。孫悟飯の師匠に当たる人物であり、現在はパンの修行に付いている。</h3>
+            <h2>Voice/古川登志夫</h2>
+            <h3>代表作[ドラゴンボール]</h3>
+        </div>
+    </div>
+    <div class="char-wrap fadein">
+        <div class="char-pic2">
+            <img class="char-pic" src="images/ct/chara_11.png" alt="ガンマ1号">
+        </div>
+        <div class="char-text">
+            <h1>ガンマ1号</h1>
+            <h3>Dr.ヘドが新たに生み出した人造人間の一体、赤いマントを羽織っている。忠誠心が強く、冷静沈着な性格をしている。</h3>
+            <h2>Voice/神谷浩史</h2>
+            <h3>代表作[進撃の巨人]</h3>
+        </div>
+    </div>
+    <div class="char-wrap fadein">
+        <div class="char-pic2">
+            <img class="char-pic" src="images/ct/chara_12.png" alt="ガンマ2号">
+        </div>
+        <div class="char-text">
+            <h1>ガンマ2号</h1>
+            <h3>Dr.ヘドが新たに生み出した人造人間の一体、青いマントを羽織っている。ややノリが軽く。ガンマ1号にたしなめられる事もある。</h3>
+            <h2>Voice/宮野真守</h2>
+            <h3>代表作[DEATH NOTE]</h3>
+        </div>
+    </div>
+    <div class="char-wrap fadein">
+        <div class="char-pic2">
+            <img class="char-pic" src="images/ct/chara_13.png" alt="Dr.ヘド">
+        </div>
+        <div class="char-text">
+            <h1>Dr.ヘド</h1>
+            <h3>レッドリボン軍に雇われている天才科学者。Dr.ゲロの孫に当たる人物で、同じく人造人間を生み出せる卓越した技術を持つ</h3>
+            <h2>Voice/入野自由</h2>
+            <h3>代表作[千と千尋の神隠し]</h3>
+        </div>
+    </div>
+    <div class="m-movie fadein">
+        <a id="movie3">
+            <div class="m-movie2">
+                <img class="B-movie" src="images/menu/menu_btn_07.png" alt="販促動画">
+            </div>
+        </a>
+        <div class="main-movie">
+            <iframe width="900" height="600" src="https://www.youtube.com/embed/A7GWuLQnDPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</main>
+
+<p id="page-top"><a href="#jump"><img src="images/menu/pagetop.png" alt=""></a></p>
+
+<footer class="footer">
+    <p class="copylight">Copyright &copy; 2022 Dragon Ball Super:SUPER HERO</p>
+</footer>
+  
+</body>
+</html>

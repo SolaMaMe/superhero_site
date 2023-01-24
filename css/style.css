@@ -1,0 +1,305 @@
+@charset "UTF-8";
+/* 共通 */
+#loader-bg {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+  }
+  #loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+  }
+.fadein{
+    opacity:0;
+    transform:translateY(30px);
+    transition:all 1s;
+    }
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    }  
+.title-logo{
+    width: 250px;
+    height: auto;
+}
+.min-logo{
+    width: 150px;
+    height: auto;
+}
+.min-logo:hover{
+    transform: scale(1.2) rotate(9deg);
+    transition-duration: 0.5s;
+} 
+.title{
+    /* background-color: aqua; */
+    width: 94%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.fuwa {
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+.fuwa:hover {
+    transform: translateY(-6px);
+}
+.fuwa img {
+    vertical-align: bottom;
+}
+.footer{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.copylight{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: black;
+    font-size: 16px;
+    font-weight: bolder;
+}
+/* トップページ */
+.mainc{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-images{
+    width: 100%;
+    position: relative;
+
+}
+.son{
+    width: 40%;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+}
+.ganma2{
+    width: 90%;
+    position: absolute;
+    top: 6%;
+    left: -6%;
+    
+}
+.ganma1{
+    width: 55%;
+    position: absolute;
+    top: 7.1%;
+    left: 5.6%;
+}
+.mainb{
+    text-align: center;
+    /* background-color: aqua; */
+    margin-top: -20%;
+}
+.fotter-logo{
+    width: 20%;
+}
+.fadeIn{
+    animation-name:fadeInAnime;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+@keyframes fadeInAnime{
+    from {
+    opacity: 0;
+    }
+    
+    to {
+    opacity: 1;
+    }
+}
+.fadeIn2{
+    animation-name:fadeInAnime;
+    animation-duration:4s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+@keyframes fadeInAnime{
+    from {
+    opacity: 0;
+    }
+    
+    to {
+    opacity: 1;
+    }
+}
+.fadeLeft{
+    animation-name:fadeLeftAnime;
+    animation-duration:5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+@keyframes fadeLeftAnime{
+    from {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    top: 6%;
+    left: -6%;
+    transform: translateX(-100px);
+    }
+    
+    to {
+    opacity: 1;
+    width: 100%;
+    position: absolute;
+    top: 6%;
+    left: -6%;
+    transform: translateX(0);
+    }
+}
+.fadeRight{
+    animation-name:fadeRightAnime;
+    animation-duration:5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+        
+@keyframes fadeRightAnime{
+    from {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    top: 7.1%;
+    left: 40%;
+    transform: translateX(100px);
+    }
+        
+    to {
+    opacity: 1;
+    width: 100%;
+    position: absolute;
+    top: 7.1%;
+    left: 40%;
+    transform: translateX(0);
+    }
+}
+/* ストーリー */
+.main-story{
+    width: 60%;
+    margin: 0 auto;
+}
+.s-icon{
+    /* background-color: aqua; */
+    width: 20%;   
+}
+.s-icon2{
+    text-align: center;
+}
+.s-images{
+    width: 90%;
+}
+.s-wrap{
+    position: relative;
+    text-align: center;
+}
+.story-text{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    background-color: rgb(247, 244, 241);
+    width: 20%;
+    border: double 5px ;
+    display: inline-block;   
+}
+.text2{
+    font-family: serif;
+    font-size: 0.6vmax;
+    font-weight: bolder;
+}
+/* ムービー */
+.main-movie{
+    text-align: center;
+}
+.m-movie2{
+    padding-top: 16%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+.B-movie{
+    width: 30%;
+}
+/* キャラクター */
+.maind{
+    width: 65%;
+    margin: 0 auto;
+}
+.B-char2{
+    text-align: center;
+}
+.B-char{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 25%;
+}
+.char-wrap{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+.char-pic{
+    width: 70%;
+    box-shadow: 10px 5px 5px rgb(54, 44, 44);
+    border-top: 2px solid rgb(54, 44, 44);
+    border-left: 2px solid rgb(54, 44, 44);   
+}
+.char-text{
+    width: 100%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    box-shadow: 10px 5px 5px rgb(54, 44, 44);
+    background-color: rgb(255, 255, 255);
+    border-top: 2px solid rgb(54, 44, 44);
+    border-left: 2px solid rgb(54, 44, 44);
+    display: inline-block; 
+}
+.char-text h1{
+    font-size: 1.5vmax;
+    font-weight: bolder;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.char-text h2{
+    font-size: 1.1vmax;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.char-text h3{
+    text-align: center;
+    margin: auto;
+    font-size: 0.9vmax;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
